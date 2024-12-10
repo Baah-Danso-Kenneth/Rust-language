@@ -15,6 +15,7 @@ fn main() {
         .read_line(&mut guess)
         .expect("Failed to read line");
 
+    loop{
     println!("You guessed: {}", guess);
     let guess: u32 = guess.trim().parse().expect("Please this has to be a number");
     match guess.cmp(&secret_number) {
@@ -22,5 +23,6 @@ fn main() {
         Ordering::Greater=>print!("Too big!"),
         Ordering::Equal => print!("You win!"),
     }
+}
 
 }
