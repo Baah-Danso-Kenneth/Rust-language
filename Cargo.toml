@@ -7,5 +7,8 @@ edition = "2021"
 name = "guess-game"
 path = "src/guess-game/main.rs"
 
+name = "programming-concept"
+path = "src/programming-concepts/main.rs"
+
 [dependencies]
 rand = "0.8.5"
