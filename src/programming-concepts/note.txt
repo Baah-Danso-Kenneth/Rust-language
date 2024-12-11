@@ -1,0 +1,27 @@
+/** Reassigning a varable**/
+ By default Variables aree immmutable meaning they cant be change
+ In order to change them you have to use "mut" attached to the variables to change them:
+
+ 
+ fun main(){
+    let mut x = 20;
+    println!("The number of x is :{x}");
+    let x=32;
+    println!("The number of x is : {x}");
+ }
+
+ In this case we have used Mutability which allows us to change x value
+
+/**const**/
+ with [const] they are immutable at defining and reaassign a variable 
+ Meaning as long as a variable is defined with a const it cannot be changed or reassigned it does not even take [mut]
+
+ The naming conventions of a const must be :   eg:  const THREE_HOUR_SECOND: u32= 60 * 60 * 3;
+
+ capital letters and seperated by a hiphen;
+
+ Shadowing:
+ With shadowing a variable is created with a let key word and later we reassigned that same value using the let key word with the same name:
+ let x=5;
+ let x=x+6;
+ 
