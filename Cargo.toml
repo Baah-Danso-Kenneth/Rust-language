@@ -3,10 +3,8 @@ name = "rust-course"
 version = "0.1.0"
 edition = "2021"
 
-[[bin]]
-name = "guess-game"
-path = "src/guess-game/main.rs"
 
+[[bin]]
 name = "programming-concept"
 path = "src/programming-concepts/main.rs"
 
