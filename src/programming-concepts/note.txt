@@ -24,4 +24,49 @@
  With shadowing a variable is created with a let key word and later we reassigned that same value using the let key word with the same name:
  let x=5;
  let x=x+6;
- 
+
+ Rust is a statically typed language which means it must know the value of every variable or object at compile time
+
+/**DATA TYPES**/
+-Scalar types
+-Compound types
+
+ A scalar types reperesent a single value.
+ Rust has four primary scalar types
+ - integer types
+ Integers can either be signed or unsigned:
+ Unasigned Integers(Positive) Integers basically refers to values without - sign:
+ 20,
+ Signed Integers have - associatiate with their values:
+ eg: -20
+
+ u32 means that a particular variable can take up to 32 bits of space
+
+ - Float types
+ - Boolean types
+ - numeric operation types
+ - Characters
+
+
+-Compound types
+***************
+This are group of group multiple values into one type:
+which means a group of elements being placed and stored in a single value:
+they include: Arrays, Tuple
+
+
+fn main(){
+   let tup:(i32, f64, u8) = (500,6.4,1)
+}
+
+Another way can also access the values of the tuple by the name given to it and its index;
+eg: 
+
+Arrays:
+******
+Arrays in Rust must have the same data type, they must also have a fixed number
+So when you want to ensure you have a fixed number of element use an array;
+
+To access an array:
+let a = [2,4,6,0]
+a[0] and will get the first number;
