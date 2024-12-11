@@ -70,3 +70,26 @@ So when you want to ensure you have a fixed number of element use an array;
 To access an array:
 let a = [2,4,6,0]
 a[0] and will get the first number;
+
+Functions
+**********
+The main function is the entry point of the rust application:
+Rust uses snake case for naming both variables and functions:
+eg: let mut the_is_a_varible:&str = 20
+    fn this_is_a_function(){}
+
+
+Statement are instruction that performs an action but do not return a value
+Expression = evaluates to a result value;
+
+In a rust when we end a line witht the semicolon it basically a statment;
+eg: let x=20;
+    x + 1
+
+    The above is an expression so concluding it with ";" will turn it into a Statement
+Callling a function is an expression;
+Calling a macro is also an expression;
+
+Defining a function is a Statement
+
+When returning a value make sure it does not end with a ";" because it will be treated as a statment which might result in an error
