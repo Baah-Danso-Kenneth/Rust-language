@@ -46,26 +46,52 @@
 
 // }
 
+// Functions
+
+// fn main(){
+//     another_function(5);
+
+// }
+
+// fn another_function(x:i32){
+//     println!("The number of x is : {x}");
+//     try_func(32, "Kenneth");
+// }
+
+
+// fn try_func(x:i32,a:&str){
+//     let age = x;
+//     let name=a;
+//   add_something(60);
+
+//     println!("My age is {age} and my name is {name}");
+// }
+
+// fn add_something(x:i32) -> i32{
+//     x * 42
+
+// }
+
+
+
 fn main(){
-    another_function(5);
+    // let number = 10;
+    // if number > 20{
+    //     println!("we ohk {}",number);
+    // }
 
-}
+    let condition = true;
+    let number = if condition{5}else{6};
+    let a=20;
 
-fn another_function(x:i32){
-    println!("The number of x is : {x}");
-    try_func(32, "Kenneth");
-}
-
-
-fn try_func(x:i32,a:&str){
-    let age = x;
-    let name=a;
-  add_something(60);
-
-    println!("My age is {age} and my name is {name}");
-}
-
-fn add_something(x:i32) -> i32{
-    x * 42
-
+    if a !=60 {
+        print!("Tooo clean {}",a);
+    }
+    let k=-3;
+    if k == -3{
+        println!("We coming")
+    }else if k < 6{
+        println!("the night is still young");
+    }
+    println!("The value for the number here is {}",number);
 }
