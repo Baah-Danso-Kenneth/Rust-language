@@ -93,3 +93,33 @@ Calling a macro is also an expression;
 Defining a function is a Statement
 
 When returning a value make sure it does not end with a ";" because it will be treated as a statment which might result in an error
+
+
+Conditional 
+************
+Rust ensures that the if statemets must be a boolean before the it runs:
+
+let number=6;
+
+if number > 3 {
+    println!("Super duper")
+}
+else if {
+    println!("Not sure)
+}
+else{
+    println!("Wicked")
+}
+
+NB: There are no ( ) assioted with the condition 
+
+NB:
+you can bind a variable to the if else statement and it will work
+all you have to do is to ensure that both the if block and the else block have the same variable:
+ie: let number = true
+    
+    let a = if number{10} else{20}
+
+    println!("this will be {a}");
+
+    this will work However when both arms ie have different types it will not rust will give us an error
