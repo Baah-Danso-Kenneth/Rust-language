@@ -1,0 +1,55 @@
+Ownership is a set of rules that govern how a Rust language manages memory.
+- Each value in rust has an Owner
+- There can only be one owner at a time
+- When the owner goes out of scope, the value will be dropped.
+
+Scope is the range with a program for which an item is valid
+
+You're **close**, but let me refine it a little for clarity: 
+
+When you declare `a = 5` and then assign `c = a`, **both `a` and `c` still have the value 5**, because `5` is a simple type (an integer) that follows the **Copy trait** in Rust. 
+
+For simple types like integers, Rust **copies** the value instead of moving ownership. So **both variables remain valid** after the assignment.
+
+---
+
+### **Example with Simple Types**
+```rust
+fn main() {
+    let a = 5; // `a` owns the value 5
+    let c = a; // `c` gets a copy of 5, `a` still owns its value
+
+    println!("{}", a); // Works: `a` is still valid
+    println!("{}", c); // Works: `c` has its own copy of 5
+}
+```
+
+---
+
+### **What Happens with Complex Types Like `String`?**
+If `a` was something like a `String`, the ownership **moves** to `c`, and `a` would no longer be valid.
+
+```rust
+fn main() {
+    let a = String::from("hello"); // `a` owns the value "hello"
+    let c = a; // Ownership moves to `c`
+
+    // println!("{}", a); // Error: `a` is no longer valid
+    println!("{}", c); // Works: `c` now owns the value
+}
+```
+
+---
+
+### **Summary**
+1. For **simple types** (like `i32`, `u32`, `f32`):
+   - The value is **copied**.
+   - Both variables remain valid.
+   - Example: `let c = a;` means `c` has a copy of `a`.
+
+2. For **complex types** (like `String`, `Vec`, `HashMap`):
+   - The ownership is **moved**.
+   - The original variable becomes invalid.
+   - Example: `let c = a;` moves ownership from `a` to `c`.
+
+Rust ensures that these rules are clear and safe to avoid memory errors!

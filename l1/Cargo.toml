@@ -6,7 +6,7 @@ edition = "2021"
 
 [[bin]]
 name = "programming-concept"
-path = "src/programming-concepts/main.rs"
+path = "src/ownership/main.rs"
 
 [dependencies]
 rand = "0.8.5"
